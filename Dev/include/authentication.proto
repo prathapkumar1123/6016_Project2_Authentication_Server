@@ -1,0 +1,41 @@
+syntax = "proto2";
+
+package auth;
+
+message LoginRequest {
+  required int64 requestorId = 1;
+  required string email = 2;
+  required string password = 3;
+}
+
+message LoginResponse {
+  required int64 requestorId = 1;
+  required string email = 2;
+  required string password = 3;
+  optional string message = 4;
+  optional Reason reason = 5;
+  
+  enum Reason {
+    INVALID_CREDENTIALS = 0;
+    INTERNAL_SERVER_ERROR = 1;
+  }
+}
+
+message RegisterRequest {
+  required int64 requestorId = 1;
+  required string email = 2;
+  required string password = 3;
+}
+
+message RegisterResponse {
+  required int64 requestorId = 1;
+  required string email = 2;
+  required string password = 3;
+  optional string message = 4;
+  optional Reason reason = 5;
+  
+  enum Reason {
+    ACCOUNT_ALREADY_EXISTS = 0;
+    INTERNAL_SERVER_ERROR = 1;
+  }
+}

@@ -18,12 +18,18 @@
     <ClCompile Include="client_main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ChatClient.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Dev\gen\authentication.pb.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Buffer.h">
+    <ClInclude Include="ChatClient.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Message.h">
+    <ClInclude Include="..\Dev\gen\authentication.pb.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
